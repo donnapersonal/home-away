@@ -51,7 +51,7 @@ async function RentalsPage() {
         </TableHeader>
         <TableBody>
           {rentals.map((rental) => {
-            const { id: propertyId, name, price } = rental;
+            const { id: propertyId, name, price } = rental as unknown as { id: never; name: string; price: number };
             const { totalNightsSum, orderTotalSum } = rental;
             return (
               <TableRow key={propertyId}>

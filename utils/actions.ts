@@ -517,7 +517,7 @@ export const fetchRentals = async () => {
       const orderTotalSum = await db.booking.aggregate({
         where: {
           propertyId: rental.id,
-          // paymentStatus: true,
+          paymentStatus: true,
         },
         _sum: {
           orderTotal: true,
