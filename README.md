@@ -31,3 +31,9 @@ npm run dev
 - [Clerk User Metadata](https://clerk.com/docs/users/metadata)
 - [React Share](https://www.npmjs.com/package/react-share)
 - [React Leaflet](https://react-leaflet.js.org/)
+- Zustand
+  - [Docs](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Recharts](https://recharts.org/en-US/)
+- Stripe
+  - [Embedded Form](https://docs.stripe.com/checkout/embedded/quickstart)
+  - [stripe](https://dashboard.stripe.com/)

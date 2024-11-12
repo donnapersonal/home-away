@@ -290,9 +290,7 @@ export async function createReviewAction(prevState: any, formData: FormData) {
   const user = await getAuthUser();
   try {
     const rawData = Object.fromEntries(formData);
-
     const validatedFields = validateWithZodSchema(createReviewSchema, rawData);
-
     await db.review.create({
       data: {
         ...validatedFields,
@@ -415,7 +413,6 @@ export const createBookingAction = async (prevState: {
     },
   });
   let bookingId: null | string = null;
-
   const { propertyId, checkIn, checkOut } = prevState;
   const property = await db.property.findUnique({
     where: { id: propertyId },
@@ -520,7 +517,7 @@ export const fetchRentals = async () => {
       const orderTotalSum = await db.booking.aggregate({
         where: {
           propertyId: rental.id,
-          paymentStatus: true,
+          // paymentStatus: true,
         },
         _sum: {
           orderTotal: true,
